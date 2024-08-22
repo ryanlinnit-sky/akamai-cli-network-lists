@@ -22,6 +22,9 @@ dependencies = [
     "requests>=2.25.1,<3.0",
 ]
 
+[project.scripts]
+akamai-network-lists = "akamai_network_lists:main"
+
 [project.urls]
 Homepage = "https://github.com/tbd"
 Issues = "https://github.com/tbd/issues"

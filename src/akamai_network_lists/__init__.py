@@ -98,9 +98,12 @@ def list(ctx):
     print("list")
 
 
-if __name__ == "__main__":
+def main():
     try:
         cli_status = cli(prog_name="akamai_network_lists", obj={})
     except Exception as e:
         logger.error(e)
         exit(1)
+
+if __name__ == "__main__":
+    main()

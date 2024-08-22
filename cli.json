@@ -6,7 +6,7 @@
     {
       "name": "network-lists",
       "aliases": [
-        "network-lists"
+        "akamai-network-lists"
       ],
       "version": "0.0.1",
       "description": "Manage Akamai Network Lists"

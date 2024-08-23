@@ -108,7 +108,7 @@ def help(ctx):
     print(ctx.parent.get_help())
 
 
-@cli.command("List Network Lists")
+@cli.command(short_help="List Network Lists")
 @pass_config
 def list(config):
     base_url, session = init_config(config.edgerc, config.section)
@@ -126,7 +126,7 @@ def list(config):
         print(f"  Element Count: {list['elementCount']}")
 
 
-@cli.command("Create Network List")
+@cli.command(short_help="Create Network List")
 @click.option(
     "-n", "--name", metavar="", help="Name of the network list", required=True
 )
@@ -155,7 +155,7 @@ def create(config, name, type, elements, description, contract_id, group_id):
     print(response)
 
 
-@cli.command("Retrieve Network List")
+@cli.command(short_help="Retrieve Network List")
 @click.argument("network_list_id")
 @pass_config
 def retrieve(config, network_list_id):
@@ -166,7 +166,7 @@ def retrieve(config, network_list_id):
     print(response)
 
 
-@cli.command("Delete Network List")
+@cli.command(short_help="Delete Network List")
 @click.argument("network_list_id")
 @pass_config
 def delete(config, network_list_id):
@@ -177,7 +177,7 @@ def delete(config, network_list_id):
     print(response)
 
 
-@cli.command("Update Network List")
+@cli.command(short_help="Update Network List")
 @click.argument("network_list_id")
 @click.option(
     "-t", "--type", metavar="", help="Type of network list (IP or GEO)", required=True
@@ -223,7 +223,7 @@ def update(
     print(response)
 
 
-@cli.command("Append Elements to Network List")
+@cli.command(short_help="Append Elements to Network List")
 @click.argument("network_list_id")
 @click.option("-e", "--elements", metavar="", help="List of elements", required=True)
 @pass_config
@@ -238,7 +238,7 @@ def append(config, network_list_id, elements):
     print(response)
 
 
-@cli.command("Update Network List details")
+@cli.command(short_help="Update Network List details")
 @click.argument("network_list_id")
 @click.option(
     "-n", "--name", metavar="", help="Name of the network list", required=True
@@ -261,7 +261,7 @@ def update_details(config, network_list_id, name, description):
     print(response)
 
 
-@cli.command("Remove Network List Element")
+@cli.command(short_help="Remove Network List Element")
 @click.argument("network_list_id")
 @click.option("-e", "--element", metavar="", help="Element to remove", required=True)
 @pass_config
@@ -275,7 +275,7 @@ def remove_element(config, network_list_id, element):
     print(response)
 
 
-@cli.command("Add Network List Element")
+@cli.command(short_help="Add Network List Element")
 @click.argument("network_list_id")
 @click.option("-e", "--element", metavar="", help="Element to add", required=True)
 @pass_config
@@ -287,7 +287,7 @@ def add_element(config, network_list_id, element):
     print(response)
 
 
-@cli.command("Activate Network List")
+@cli.command(short_help="Activate Network List")
 @click.argument("network_list_id")
 @click.option(
     "-e",
@@ -332,7 +332,7 @@ def activate(
     print(response)
 
 
-@cli.command("Get Activation Status")
+@cli.command(short_help="Get Activation Status")
 @click.argument("network_list_id")
 @click.option(
     "-e",
@@ -352,7 +352,7 @@ def activation_status(config, network_list_id, environment):
     print(response)
 
 
-@cli.command("Get Activation Snapshot")
+@cli.command(short_help="Get Activation Snapshot")
 @click.argument("network_list_id")
 @click.option("-s", "--sync-point", metavar="", help="Sync Point", required=True)
 @click.option("-x", "--extended", is_flag=True, help="Extended output", required=False)

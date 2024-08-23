@@ -1,5 +1,35 @@
 # Akamai Network Lists
 
+A package for [Akamai CLI](https://github.com/akamai/cli) to interact with the Network Lists API.
+An API summary can be found [here](https://techdocs.akamai.com/network-lists/reference/api-summary).
+
+## Usage
+
+```
+Usage: akamai_network_lists [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  -e, --edgerc        Location of the credentials file [$AKAMAI_EDGERC]
+  -s, --section       Section of the credentials file [$AKAMAI_EDGERC_SECTION]
+  -a, --account-key   Account Key
+  --version           Show the version and exit.
+  -h, --help          Show this message and exit.
+
+Commands:
+  activate             Activate Network List
+  activation-snapshot  Get Activation Snapshot
+  activation-status    Get Activation Status
+  add-element          Add Network List Element
+  append               Append Elements to Network List
+  create               Create Network List
+  delete               Delete Network List
+  help                 Show help information
+  list                 List Network Lists
+  remove-element       Remove Network List Element
+  retrieve             Retrieve Network List
+  update               Update Network List
+  update-details       Update Network List details
+```
 
 ## Development
 

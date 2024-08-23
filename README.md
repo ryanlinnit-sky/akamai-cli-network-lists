@@ -15,7 +15,7 @@ hatch shell
 
 The main "binary" is located in `bin/akamai-network-lists.py`. The reason is because the akamai-cli tool has it's own format a python module must adhere to. It [looks for files](https://github.com/akamai/cli/blob/20c6521bfe3cb129bc5a41c81e206bba27e40efd/pkg/commands/command.go#L372) under the `bin` directory that [match the pattern](https://github.com/akamai/cli/blob/20c6521bfe3cb129bc5a41c81e206bba27e40efd/pkg/commands/command.go#L286) of `akamai-command-name`.
 
-We also [need to list our dependencies](https://github.com/akamai/cli/blob/20c6521bfe3cb129bc5a41c81e206bba27e40efd/pkg/packages/python.go#L128) in a `requirements.txt` file, as we are using `pyproject.toml` to define our build system requirements and dependencies, this means we can solely include `.` in `requirements.txt` and this module will be installed.
+We also [need to list our dependencies](https://github.com/akamai/cli/blob/20c6521bfe3cb129bc5a41c81e206bba27e40efd/pkg/packages/python.go#L128) in a `requirements.txt` file, as we are using `pyproject.toml` to define our build system requirements and dependencies, this means we have only included `akamai-network-lists` in `requirements.txt` and this module will be installed from [PyPi](https://pypi.org/project/akamai-network-lists/).
 
 There is some information in the [README.md](https://github.com/akamai/cli/blob/20c6521bfe3cb129bc5a41c81e206bba27e40efd/README.md#command-package-metadata) for akamai-cli, but a lot of the specifics seem un-written..
 
